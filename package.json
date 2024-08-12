@@ -1,0 +1,31 @@
+{
+  "name": "@chainplatform/swiper",
+  "version": "0.1.0",
+  "description": "@chainplatform/swiper support react-native and react-native-web",
+  "main": "index.js",
+  "devDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  },
+  "author": "Chain Platform <santran686@gmail.com> (https://chainplatform.net/)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native-web",
+    "@chainplatform/swiper"
+  ],
+  "homepage": "https://github.com/ChainPlatform/react-native-swiper-flatlist",
+  "bugs": "https://github.com/ChainPlatform/react-native-swiper-flatlist/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ChainPlatform/react-native-swiper-flatlist.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  }
+}
