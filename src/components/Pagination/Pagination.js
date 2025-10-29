@@ -1,6 +1,4 @@
-import React from "react"
 import { I18nManager, StyleSheet, Pressable, View } from "react-native"
-
 import { colors, vertical, horizontal } from "../../themes"
 
 const styles = StyleSheet.create({
@@ -16,7 +14,7 @@ const styles = StyleSheet.create({
     pagination: {
         width: horizontal.small,
         height: horizontal.small,
-        borderRadius: 25,
+        borderRadius: horizontal.small / 2,
         marginHorizontal: horizontal.xSmall
     }
 })
@@ -40,6 +38,7 @@ export const Pagination = ({
         <View style={[styles.container, paginationStyle]}>
             {Array.from({ length: size }).map((_, index) => (
                 <Pressable
+                    key={index}
                     testID={`${e2eID}_pagination_${index}`}
                     style={[
                         styles.pagination,
@@ -51,14 +50,15 @@ export const Pagination = ({
                             ? paginationStyleItemActive
                             : paginationStyleItemInactive
                     ]}
-                    key={index}
                     onPress={() => {
-                        scrollToIndex({ index })
-                        onPaginationSelectedIndex?.()
+                        scrollToIndex?.({ index })
+                        onPaginationSelectedIndex?.(index)
                     }}
                     disabled={paginationTapDisabled}
-                    accessibilityLabel={paginationAccessibilityLabels[index]}
-                    accessible={!!paginationAccessibilityLabels[index]}
+                    accessibilityLabel={
+                        paginationAccessibilityLabels[index] || `pagination_${index}`
+                    }
+                    accessible={!!(paginationAccessibilityLabels[index] || true)}
                 />
             ))}
         </View>

@@ -1,6 +1,6 @@
 {
   "name": "@chainplatform/swiper",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "@chainplatform/swiper support react-native and react-native-web",
   "main": "index.js",
   "devDependencies": {
